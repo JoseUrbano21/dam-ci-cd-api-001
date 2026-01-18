@@ -21,5 +21,8 @@ jobs:
           java-version: "17"
           cache: maven
 
+      - name: Dar permisos de ejecución a mvnw
+        run: chmod +x mvnw
+
       - name: Compilar y ejecutar tests con Maven Wrapper
         run: ./mvnw -B clean test
